@@ -7,6 +7,16 @@ on:
 jobs:
   web_scrapper:
     runs-on: ubuntu-latest
+    services:
+      browser:
+        image: ghcr.io/browserless/chromium
+        ports:
+          - 3000:3000
+        env:
+          TOKEN: test-token
+          CONCURRENT: 10
+          TIMEOUT: 600000
+          DEBUG: -*
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -20,6 +30,8 @@ jobs:
         run: npm run typecheck
       - name: Lint
         run: npm run lint:test
+      - name: Update .env.test for CI
+        run: sed -i 's|ws://browserless:3000|ws://localhost:3000|' .env.test
       - name: Coverage
         run: npm run test:coverage
       - name: Integration tests

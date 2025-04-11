@@ -1,5 +1,6 @@
 import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
+import { RoomModule } from '@infra/modules/room.module';
 import { LoggerModule } from '@infra/modules/logger.module';
 import { LoggerMiddleware } from '@infra/http/middlewares/logger.middleware';
 
@@ -8,6 +9,7 @@ import { LoggerMiddleware } from '@infra/http/middlewares/logger.middleware';
     ConfigModule.forRoot({
       isGlobal: true,
     }),
+    RoomModule,
     LoggerModule,
   ],
 })
