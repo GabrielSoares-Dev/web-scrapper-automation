@@ -73,7 +73,10 @@ describe('Search rooms', () => {
       .post(path)
       .send(input)
       .expect(expectedStatusCode)
-      .expect(expectedResponse);
+      .expect(expectedResponse)
+      .then((response) => {
+        console.log('Response:', response.body);
+      });
   });
 
   it('Should be not found rooms', async () => {
