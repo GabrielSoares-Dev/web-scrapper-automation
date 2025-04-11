@@ -28,6 +28,8 @@ jobs:
         run: npm i
       - name: Typecheck
         run: npm run typecheck
+      - name: Update .env.test
+        run: sed -i 's|BROWSERLESS_URL=ws://localhost:3000' .env.test
       - name: Lint
         run: npm run lint:test
       - name: Coverage
