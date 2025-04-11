@@ -28,10 +28,10 @@ jobs:
         run: npm i
       - name: Typecheck
         run: npm run typecheck
-      - name: Update .env.test for CI
-        run: sed -i 's|ws://browserless:3000|ws://localhost:3000|' .env.test
       - name: Lint
         run: npm run lint:test
+      - name: Update .env.test for CI
+        run: sed -i 's|ws://browserless:3000|ws://localhost:3000|' .env.test
       - name: Coverage
         run: npm run test:coverage
       - name: Integration tests
