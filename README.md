@@ -52,8 +52,7 @@ Siga os passos abaixo para configurar e executar o projeto:
 
 3. **Abra o projeto no container Dev Container**:
    - Abra o VS Code na pasta do projeto.
-   - Pressione `F1` ou `Ctrl+Shift+P` e procure por `Dev Containers: Reopen in Container`.
-   - Aguarde o Dev Container configurar o ambiente de desenvolvimento.
+   - Abra extensão dev container e faça o attach do container ao vscode, apos isso procure a pasta app e lá estará projeto
 
 4. **Inicie o projeto em modo de desenvolvimento**:
    - Execute o seguinte comando no terminal:
