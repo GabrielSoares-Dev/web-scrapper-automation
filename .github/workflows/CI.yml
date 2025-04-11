@@ -1,0 +1,14 @@
+name: CI
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - master
+jobs:
+  docker_portainer:
+    name: CI
+    uses: GabrielSoares-Dev/workflows/.github/workflows/nestjs-docker-portainer-CI.yml@master
+    with:
+      node_version: '18.x'
+      mysql_version: mysql:5.7
+      mysql_db_name: boilerplate-nestjs-docker-test

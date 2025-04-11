@@ -1,0 +1,23 @@
+{
+  "moduleFileExtensions": [
+    "js",
+    "json",
+    "ts"
+  ],
+  "rootDir": ".",
+  "testEnvironment": "node",
+  "testRegex": ".integration-spec.ts$",
+  "moduleNameMapper": {
+    "@application/(.*)$": "<rootDir>/../../src/application/$1",
+    "@domain/(.*)$": "<rootDir>/../../src/domain/$1",
+    "@infra/(.*)$": "<rootDir>/../../src/infra/$1",
+    "@test/(.*)$": "<rootDir>/../$1"
+  },
+  
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "setupFilesAfterEnv": ["<rootDir>/jest.setup.ts"],
+  "maxWorkers": 1
+
+}

@@ -1,0 +1,29 @@
+version: '3.5'
+
+services:
+  boilerplate-nestjs-docker:
+    container_name: boilerplate-nestjs-docker
+    build: 
+     context: .
+     dockerfile: Dockerfile.dev
+    restart: always
+    ports:
+      - '3005:3005'
+    volumes:
+      - .:/app
+      - node-modules-boilerplate-nestjs-docker-volume:/app/node_modules
+    networks:
+      - boilerplate-nestjs-docker-network
+      - mysql-network
+    stdin_open: true
+    tty: true
+volumes:
+  node-modules-boilerplate-nestjs-docker-volume:
+    name: node-modules-boilerplate-nestjs-docker-volume
+networks:
+  boilerplate-nestjs-docker-network:
+    name: boilerplate-nestjs-docker-network
+    driver: bridge
+  mysql-network:
+    name: mysql-network
+    driver: bridge
