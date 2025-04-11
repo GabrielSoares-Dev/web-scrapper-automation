@@ -71,7 +71,7 @@ Siga os passos abaixo para configurar e executar o projeto:
      [![Executar no Postman](https://run.pstmn.io/button.svg)](https://documenter.getpostman.com/view/37022898/2sB2cYdLuG)
    - Importe a documentação no Postman e configure as variáveis de ambiente, se necessário.
 
-7. **Chame aAPI no Postman**:
+7. **Chame a API no Postman**:
    - Utilize os endpoints disponíveis na documentação para testar a API.
 
 ---
