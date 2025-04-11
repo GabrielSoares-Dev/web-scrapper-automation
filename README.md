@@ -46,7 +46,10 @@ Siga os passos abaixo para configurar e executar o projeto:
    - Instale a extensão **Dev Containers** no VS Code. Você pode encontrá-la na aba de extensões pesquisando por "Dev Containers".
   
 2. **Rodar container**:
-   - Digite docker-compose up -d no terminal
+  - Execute o seguinte comando no terminal:
+     ```bash
+     docker-compose up -d
+     ```
 
 3. **Crie o arquivo `.env`**:
    - Na raiz do projeto, crie um arquivo chamado `.env`.
