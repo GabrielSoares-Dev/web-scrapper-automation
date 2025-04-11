@@ -75,7 +75,7 @@ export class RoomsService implements RoomsServiceInterface {
 
     try {
       const url = this.buildUrl(input);
-      await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
+      await page.goto(url, { waitUntil: 'networkidle0', timeout: 0 });
 
       const rooms = await this.findRoomsFromDataSource(page);
 

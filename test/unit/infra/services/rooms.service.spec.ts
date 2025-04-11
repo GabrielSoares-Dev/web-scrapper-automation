@@ -79,7 +79,7 @@ describe('RoomsService', () => {
     expect(output).toEqual(expectedOutput);
     expect(mockPage.goto).toHaveBeenCalledWith(
       `${process.env.DATA_SOURCE_URL}?entrada=${mockInput.checkIn}&saida=${mockInput.checkOut}&adultos=1#acomodacoes`,
-      { waitUntil: 'networkidle2', timeout: 60000 },
+      { waitUntil: 'networkidle0', timeout: 0 },
     );
     expect(mockPage.evaluate).toHaveBeenCalled();
     expect(mockBrowser.close).toHaveBeenCalled();
