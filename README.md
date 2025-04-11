@@ -44,28 +44,31 @@ Siga os passos abaixo para configurar e executar o projeto:
 1. **Instale a extensão Dev Containers no VS Code**:
    - Certifique-se de que o Visual Studio Code está instalado.
    - Instale a extensão **Dev Containers** no VS Code. Você pode encontrá-la na aba de extensões pesquisando por "Dev Containers".
+  
+2. **Rodar container**:
+   - Digite docker-compose up -d no terminal
 
-2. **Crie o arquivo `.env`**:
+3. **Crie o arquivo `.env`**:
    - Na raiz do projeto, crie um arquivo chamado `.env`.
    - Copie o conteúdo do arquivo `.env.example` e cole no arquivo `.env`.
    - Configure as variáveis de ambiente conforme necessário.
 
-3. **Abra o projeto no container Dev Container**:
+4. **Abra o projeto no container Dev Container**:
    - Abra o VS Code na pasta do projeto.
    - Abra extensão dev container e faça o attach do container ao vscode, apos isso procure a pasta app e lá estará projeto
 
-4. **Inicie o projeto em modo de desenvolvimento**:
+5. **Inicie o projeto em modo de desenvolvimento**:
    - Execute o seguinte comando no terminal:
      ```bash
      npm run start:dev
      ```
 
-5. **Abra o Postman e importe a documentação da API**:
+6. **Abra o Postman e importe a documentação da API**:
    - Use o link abaixo para acessar a documentação da API no Postman:
      [![Executar no Postman](https://run.pstmn.io/button.svg)](https://documenter.getpostman.com/view/37022898/2sB2cYdLuG)
    - Importe a documentação no Postman e configure as variáveis de ambiente, se necessário.
 
-6. **Chame aAPI no Postman**:
+7. **Chame aAPI no Postman**:
    - Utilize os endpoints disponíveis na documentação para testar a API.
 
 ---
