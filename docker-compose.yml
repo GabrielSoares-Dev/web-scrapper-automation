@@ -1,0 +1,23 @@
+version: '3.5'
+
+services:
+  web-scrapper-automation:
+    container_name: web-scrapper-automation
+    build: .
+    restart: always
+    ports:
+      - '3005:3005'
+    volumes:
+      - .:/app
+      - node-modules-web-scrapper-automation-volume:/app/node_modules
+    networks:
+      - web-scrapper-automation-network
+    stdin_open: true
+    tty: true
+volumes:
+  node-modules-web-scrapper-automation-volume:
+    name: node-modules-web-scrapper-automation-volume
+networks:
+  web-scrapper-automation-network:
+    name: web-scrapper-automation-network
+    driver: bridge
