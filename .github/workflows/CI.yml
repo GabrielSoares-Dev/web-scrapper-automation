@@ -5,7 +5,7 @@ on:
     branches:
       - master
 jobs:
-  docker_portainer:
+  web_scrapper:
     runs-on: ubuntu-latest
     services:
     steps:
