@@ -14,6 +14,18 @@ services:
       - web-scrapper-automation-network
     stdin_open: true
     tty: true
+  browser:
+     container_name: browserless
+     image: ghcr.io/browserless/chromium
+     environment:
+      TOKEN: test-token
+      CONCURRENT: 10
+      TIMEOUT: 600000
+      DEBUG: -*
+     networks:
+      - web-scrapper-automation-network
+     ports:
+      - 3000:3000
 volumes:
   node-modules-web-scrapper-automation-volume:
     name: node-modules-web-scrapper-automation-volume
