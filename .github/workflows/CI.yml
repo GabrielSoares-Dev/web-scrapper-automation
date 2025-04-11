@@ -5,10 +5,22 @@ on:
     branches:
       - master
 jobs:
-  docker_portainer:
-    name: CI
-    uses: GabrielSoares-Dev/workflows/.github/workflows/nestjs-docker-portainer-CI.yml@master
-    with:
-      node_version: '18.x'
-      mysql_version: mysql:5.7
-      mysql_db_name: boilerplate-nestjs-docker-test
+  web_scrapper:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18.x'
+      - name: Install dependencies
+        run: npm i
+      - name: Typecheck
+        run: npm run typecheck
+      - name: Lint
+        run: npm run lint:test
+      - name: Coverage
+        run: npm run test:coverage
+      - name: Integration tests
+        run: npm run test:integration
